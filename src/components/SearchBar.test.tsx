@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "./SearchBar";
 
 import AllContexts from "../context/AllContexts";
 

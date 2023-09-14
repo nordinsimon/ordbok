@@ -3,6 +3,10 @@ import { useActiveWord } from "../context/useContext";
 
 import "./SearchBar.css";
 
+/**
+ *
+ * @returns the search bar component to App
+ */
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { setActiveWord } = useActiveWord();

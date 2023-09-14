@@ -9,6 +9,11 @@ interface MeaningProps {
   setMeaningState: React.Dispatch<React.SetStateAction<number>>;
 }
 
+/**
+ * Component that renders the meaning of the word
+ * and returning information about the word
+ * based on if there is any information to show
+ */
 const Meaning: React.FC<MeaningProps> = ({
   meanings,
   length,
@@ -17,6 +22,10 @@ const Meaning: React.FC<MeaningProps> = ({
 }) => {
   const { partOfSpeech, definitions, synonyms, antpnyms } = meanings;
 
+  /**
+   * If the definitions are not undefined,
+   * then map through the definitions
+   */
   const Definitions = () => {
     if (definitions !== undefined) {
       return (
@@ -32,6 +41,10 @@ const Meaning: React.FC<MeaningProps> = ({
     }
   };
 
+  /**
+   * If the synonyms are not undefined,
+   * then map through the synonyms
+   */
   const Synonyms = () => {
     if (synonyms !== undefined && synonyms.length > 0) {
       return (
@@ -47,6 +60,10 @@ const Meaning: React.FC<MeaningProps> = ({
     }
   };
 
+  /**
+   * If the antonyms are not undefined,
+   * then map through the antonyms
+   */
   const Antonyms = () => {
     if (antpnyms !== undefined) {
       return (
@@ -62,6 +79,11 @@ const Meaning: React.FC<MeaningProps> = ({
     }
   };
 
+  /**
+   * If the length of the meanings array is greater than 1,
+   * then it shod be possible to change between for
+   * example th noun and verb
+   */
   const ChangeMeaning = () => {
     const onClick = () => {
       if (meaningState < length - 1) {

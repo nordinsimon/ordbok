@@ -3,6 +3,11 @@ import { Word } from "../types";
 
 import "./FavouritesBox.css";
 
+/**
+ * This box shows all the favourites words
+ * and returns an empty box if there are no favourites,
+ * in the bottom of the box you can delete all favourites.
+ */
 const FavouritesBox = () => {
   const { favourites, setFavourites } = useFavourites();
   const { setActiveWord } = useActiveWord();
@@ -20,6 +25,9 @@ const FavouritesBox = () => {
     );
   }
 
+  /**
+   * This function sets the active word to the favourite word
+   */
   const handleFavouriteToActiveWord = (favourite: Word) => {
     const prepFavorite = [favourite];
     setActiveWord(prepFavorite);
