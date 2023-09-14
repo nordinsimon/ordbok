@@ -11,11 +11,9 @@ import App from "./App";
 import AllContexts from "./context/AllContexts";
 
 import exWord_hi from "./__test__/exampleWords/exWord_hi.json";
-import { s } from "vitest/dist/reporters-cb94c88b.js";
 
 const hi_word = exWord_hi[0].word;
 const hi_phonetic = exWord_hi[0].phonetic;
-const sorceUrls = exWord_hi[0].sourceUrls;
 
 const server = setupServer(
   // Describe the requests to mock.
@@ -51,6 +49,7 @@ test("Check if text dissapears when clicked button", async () => {
 
   await user.type(searchBar, hi_word);
   expect(searchBar).toHaveValue("hi");
+
   await user.click(button);
   expect(searchBar).toHaveValue("");
 });

@@ -14,9 +14,6 @@ import exWord_hi from "./__test__/exampleWords/exWord_hi.json";
 
 const hi_word = exWord_hi[0].word;
 
-/**
- * Setting up the server for "hi"
- */
 const server = setupServer(
   rest.get(
     `https://api.dictionaryapi.dev/api/v2/entries/en/${hi_word}`,

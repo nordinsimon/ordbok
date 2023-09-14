@@ -22,8 +22,8 @@ test("Check if audio is playable", async () => {
   const audioSpy = vi.spyOn(global, "Audio");
 
   expect(button).toBeInTheDocument();
-  await user.click(button);
 
+  await user.click(button);
   expect(audioSpy).toHaveBeenCalled();
 });
 
