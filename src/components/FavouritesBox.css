@@ -1,0 +1,25 @@
+.FavouritesBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 12rem;
+  height: fit-content;
+}
+
+.FavouriteButton {
+  margin-top: 10px;
+}
+
+.DeleteButton {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 50px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

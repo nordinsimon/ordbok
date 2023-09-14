@@ -1,0 +1,17 @@
+.ResultBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 32rem;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.PhoneticsBox {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}

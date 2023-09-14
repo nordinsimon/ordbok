@@ -1,0 +1,17 @@
+.HeaderBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+.IconButton {
+  height: 4em;
+  width: 4em;
+}
+
+.Icon {
+  font-size: 1.5em;
+}
