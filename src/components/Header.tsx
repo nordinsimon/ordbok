@@ -2,7 +2,10 @@ import "./Header.css";
 
 import { FaSun } from "react-icons/fa";
 
-// Function used to switch between light and dark theme
+/**
+ * Function used to switch between
+ * light and dark theme
+ */
 function editColorTheme() {
   const root = document.documentElement;
   const currentColor = root.style.getPropertyValue("--color-text");
@@ -18,7 +21,11 @@ function editColorTheme() {
   }
 }
 
-// Header component and button to switch between light and dark theme
+/**
+ * Component that renders the header of the page
+ * and returning a button to switch between
+ * light and dark theme
+ */
 const Header = () => {
   return (
     <div className="HeaderBox">

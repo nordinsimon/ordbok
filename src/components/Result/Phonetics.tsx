@@ -1,6 +1,11 @@
 import "./Phonetics.css";
 import { Phonetics } from "../../types";
 
+/**
+ * Component that renders the phonetics of the word
+ * and returning a button to play the audio if
+ * there is any audio to play
+ */
 const PhoneticsComponent = ({ text, audio }: Phonetics) => {
   const playAudio = () => {
     const play = new Audio(audio);

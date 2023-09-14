@@ -13,6 +13,12 @@ interface ResultProps {
   activeWord: Word;
 }
 
+/**
+ *
+ * If there is a word to get from the API,
+ * this component will render the word
+ * and returning information about the word
+ */
 const Result: React.FC<ResultProps> = ({ activeWord }) => {
   const { word, phonetic, phonetics, meanings, sourceUrls } = activeWord;
   const { favourites, setFavourites } = useFavourites();
@@ -36,6 +42,10 @@ const Result: React.FC<ResultProps> = ({ activeWord }) => {
     }
   };
 
+  /**
+   * Check if the word is already saved as a favourite
+   * and returning a button to save or delete the word
+   */
   const FavouriteButton = () => {
     if (!favourites.includes(activeWord)) {
       return <button onClick={addFavourite}>Save as a favourite</button>;

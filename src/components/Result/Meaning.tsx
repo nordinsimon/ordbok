@@ -93,6 +93,11 @@ const Meaning: React.FC<MeaningProps> = ({
       }
     };
 
+    /**
+     * If there is more than one part of speach word
+     * then it should be possible to change between them
+     * by clicking the button
+     */
     if (length > 1) {
       return (
         <div className="ChangeMeaning">
