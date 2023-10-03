@@ -17,6 +17,12 @@ const SearchBar = () => {
   });
 
   const fetchWord = async (word: string) => {
+    if (word === "" || word === " ") {
+      setActiveWord(false);
+      setSearchTerm("");
+      return;
+    }
+
     const res = await fetch(
       `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
     );

@@ -4,7 +4,7 @@ export type ContextInterface = {
 
 export type Favourites = Word[];
 
-export type ActiveWord = null | undefined | Word[];
+export type ActiveWord = null | undefined | false | Word[];
 
 export type Word = {
   word: string;

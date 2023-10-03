@@ -13,8 +13,13 @@ import Result from "./Result";
  */
 const ActiveWordBox = () => {
   const { activeWord } = useActiveWord();
-
-  if (activeWord === undefined)
+  if (activeWord === false) {
+    return (
+      <div className="ResultBox">
+        <h1>Please enter a word</h1>
+      </div>
+    );
+  } else if (activeWord === undefined)
     return (
       <div className="ResultBox">
         <h1>Search for a word</h1>

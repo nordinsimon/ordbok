@@ -22,6 +22,12 @@ const server = setupServer(
     (_req, res, ctx) => {
       return res(ctx.json(exWord_hi));
     }
+  ),
+  rest.get(
+    `https://api.dictionaryapi.dev/api/v2/entries/en/notAWord`,
+    (_req, res, ctx) => {
+      return res(ctx.status(404));
+    }
   )
 );
 
@@ -95,4 +101,18 @@ test("check that it is possible to change part of speech", async () => {
   const nextButton = screen.getByText("Next");
   await user.click(nextButton);
   expect(screen.getByText("interjection")).toBeInTheDocument();
+});
+
+test("Check that error messages is working", async () => {
+  custumRender();
+  const user = userEvent.setup();
+  const searchBar = screen.getByRole("textbox");
+  const button = screen.getByText("Search");
+
+  await user.click(button);
+  expect(screen.getByText("Please enter a word")).toBeInTheDocument();
+
+  await user.type(searchBar, "notAWord");
+  await user.click(button);
+  expect(screen.getByText("Word not found")).toBeInTheDocument();
 });
